@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Campus ID Badge</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="badge">
+    <h3>Campus ID Badge</h3>
+    <div class="row">
+        <div class="label">Name</div>
+        <div class="value" id="studentName"></div>
+    </div>
+    <div class="row">
+        <div class="label">Dept</div>
+        <div class="value" id="department"></div>
+    </div>
+    <div class="row">
+        <div class="label">Seed</div>
+        <div class="value" id="seedValue"></div>
+    </div>
+    <div class="row">
+        <div class="label">Check Code</div>
+        <div class="value checkcode" id="checkCode"></div>
+    </div>
+</div>
+
+
+<script>
+    const name = "Sejal Sharma";
+    const dept = "CSE";
+    const seed = "CSE-27";
+
+    const digit1 = Number(seed.charAt(4));
+    const digit2 = Number(seed.charAt(5));
+
+    const sum = digit1 + digit2;
+    const checkCode = (sum * 7) % 97;
+
+    document.getElementById("studentName").textContent = name;
+    document.getElementById("department").textContent = dept;
+    document.getElementById("seedValue").textContent = seed;
+    document.getElementById("checkCode").textContent = checkCode;
+    document.getElementById()
+</script>
+
+</body>
+</html>
